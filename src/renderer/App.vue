@@ -52,5 +52,7 @@
         vertical-align: top;
         box-sizing: border-box;
         padding: 0 20px;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        color: #333;
     }
 </style>
