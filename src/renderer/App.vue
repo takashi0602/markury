@@ -17,7 +17,9 @@
         },
         computed: {
             compile() {
-                return marked(this.input)
+                return marked(this.input, {
+                    sanitize: true,
+                })
             }
         }
     }
