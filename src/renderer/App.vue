@@ -1,18 +1,25 @@
-<template lang="pug">
-    .container
-        textarea.markdown
-        .result
-            h1 hoge
+<template>
+    <div class="container">
+        <textarea class="markdown" v-model="input"></textarea>
+        <div class="result" v-html="compile"></div>
+    </div>
 </template>
 
 <script>
+    import marked from 'marked'
+    import _ from 'lodash'
+
     export default {
         data() {
             return {
-                input: '# hello, markury!'
+                input: '# hello, markury!',
             }
         },
-
+        computed: {
+            compile() {
+                return marked(this.input)
+            }
+        }
     }
 </script>
 
@@ -32,7 +39,7 @@
     }
     .markdown {
         display: inline-block;
-        width: 50%;
+        width: 49%;
         height: 100%;
         vertical-align: top;
         box-sizing: border-box;
@@ -47,7 +54,7 @@
     }
     .result {
         display: inline-block;
-        width: 50%;
+        width: 49%;
         height: 100%;
         vertical-align: top;
         box-sizing: border-box;
