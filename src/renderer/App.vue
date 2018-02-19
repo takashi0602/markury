@@ -18,6 +18,9 @@
         computed: {
             compile() {
                 return marked(this.input, {
+                    gfm: true,
+                    tables: true,
+                    breaks: true,
                     sanitize: true,
                 })
             }
