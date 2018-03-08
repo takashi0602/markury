@@ -66,6 +66,6 @@
         padding: 0 20px;
         font-family: 'Helvetica Neue', Arial, sans-serif;
         color: #333;
-		overflow: scroll;
+	overflow: scroll;
     }
 </style>
